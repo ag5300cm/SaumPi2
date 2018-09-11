@@ -2,6 +2,7 @@
 import random
 import CardDeck
 import PlayerClass
+import FindWinner
 # for uplead
 
 
@@ -21,17 +22,6 @@ def draw_cards():  # This function will add a random card
             return rando_card_num, card_number_worth  # returning card type, and card playing value
 
         rande_number = random.randint(1, 52)  # will start over is number is in master list
-
-
-def total_score(number_list):  # The purpose of this function is to add up the total scores of the cards in hand
-    add_up = 0  # used for adding other numbers to
-    for i in number_list:  # goes through each item in the list
-        add_up = add_up + i
-        if add_up >= 10:  # checks if above ten, this is Saum Pi after all
-            add_up = add_up - 10
-    return_number = add_up
-    return return_number  # Going to get remainder for ten division
-
 
 # used to hold list of players cards
 arrayPlayer1 = []
@@ -64,11 +54,11 @@ for x in range(3):
 #bob.play()
 #bob.play_winner()
 
-print("Your cards are: ", arrayPlayer1, "Your score is: ", total_score(arrayPlayer1Numbers))  # not sure which looks better for viewing change how you wish lucky
+print("Your cards are: ", arrayPlayer1, "Your score is: ", FindWinner.total_score(arrayPlayer1Numbers))  # not sure which looks better for viewing change how you wish lucky
 #print(arrayPlayer1)
-print("Player two cards: ", arrayPlayer2, "score is: ", total_score(arrayPlayer2Numbers))
+print("Player two cards: ", arrayPlayer2, "score is: ", FindWinner.total_score(arrayPlayer2Numbers))
 print("Player three cards: ")
-print(arrayPlayer3, "score is: ", total_score(arrayPlayer3Numbers))
+print(arrayPlayer3, "score is: ", FindWinner.total_score(arrayPlayer3Numbers))
 
 billyBob = PlayerClass.Player("bob")
 
