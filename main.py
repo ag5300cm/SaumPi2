@@ -27,8 +27,10 @@ def total_score(number_list):  # The purpose of this function is to add up the t
     add_up = 0  # used for adding other numbers to
     for i in number_list:  # goes through each item in the list
         add_up = add_up + i
-    print(add_up)
-    return (add_up % 10)  # Going to get remainder for ten division
+        if add_up >= 10:  # checks if above ten, this is Saum Pi after all
+            add_up = add_up - 10
+    return_number = add_up
+    return return_number  # Going to get remainder for ten division
 
 
 # used to hold list of players cards
@@ -51,10 +53,10 @@ for x in range(3):
     #print(total_score(arrayPlayer1Numbers))
     card2 = draw_cards()
     arrayPlayer2.append(card2[0])
-    arrayPlayer2Numbers.append(card[1])
+    arrayPlayer2Numbers.append(card2[1])
     card3 = draw_cards()
     arrayPlayer3.append(card3[0])
-    arrayPlayer3Numbers.append(card[1])
+    arrayPlayer3Numbers.append(card3[1])
 
 
 #Player = bob()
