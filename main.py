@@ -27,14 +27,17 @@ def total_score(number_list):  # The purpose of this function is to add up the t
     add_up = 0  # used for adding other numbers to
     for i in number_list:  # goes through each item in the list
         add_up = add_up + i
+    print(add_up)
     return (add_up % 10)  # Going to get remainder for ten division
 
 
+# used to hold list of players cards
 arrayPlayer1 = []
 arrayPlayer2 = []
 arrayPlayer3 = []  # currently at three players
 arrayPlayer4 = []
 
+# used to hold list of player cards value
 arrayPlayer1Numbers = []
 arrayPlayer2Numbers = []
 arrayPlayer3Numbers = []
@@ -61,10 +64,9 @@ for x in range(3):
 
 print("Your cards are: ", arrayPlayer1, "Your score is: ", total_score(arrayPlayer1Numbers))  # not sure which looks better for viewing change how you wish lucky
 #print(arrayPlayer1)
-print("Player two cards: ")
-print(arrayPlayer2)
+print("Player two cards: ", arrayPlayer2, "score is: ", total_score(arrayPlayer2Numbers))
 print("Player three cards: ")
-print(arrayPlayer3)
+print(arrayPlayer3, "score is: ", total_score(arrayPlayer3Numbers))
 
 billyBob = PlayerClass.Player("bob")
 
