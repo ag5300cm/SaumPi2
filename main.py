@@ -3,7 +3,7 @@ import random
 import CardDeck
 import PlayerClass
 import FindWinner
-# for uplead
+# for uplead2
 
 
 #player_name = input("Whats your name? ")
