@@ -48,6 +48,11 @@ for x in range(3):
     arrayPlayer3.append(card3[0])
     arrayPlayer3Numbers.append(card3[1])
 
+# this list is used to determine whom wins the match
+playerListNumbers = [FindWinner.total_score(arrayPlayer1Numbers), FindWinner.total_score(arrayPlayer2Numbers),
+                     FindWinner.total_score(arrayPlayer3Numbers)]
+
+
 
 #Player = bob()
 #bob = Player()
@@ -59,6 +64,8 @@ print("Your cards are: ", arrayPlayer1, "Your score is: ", FindWinner.total_scor
 print("Player two cards: ", arrayPlayer2, "score is: ", FindWinner.total_score(arrayPlayer2Numbers))
 print("Player three cards: ")
 print(arrayPlayer3, "score is: ", FindWinner.total_score(arrayPlayer3Numbers))
+FindWinner.compare_score(playerListNumbers)
+
 
 billyBob = PlayerClass.Player("bob")
 
