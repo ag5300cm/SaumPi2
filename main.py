@@ -6,6 +6,11 @@ import FindWinner
 # for uplead
 
 
+#player_name = input("Whats your name? ")
+p1 = PlayerClass.Player(input("Whats your name? "))
+print(p1.name)
+
+
 
 numbers_used_list = []  # where used to try and make sure you don't draw the same card twice
 def draw_cards():  # This function will add a random card
